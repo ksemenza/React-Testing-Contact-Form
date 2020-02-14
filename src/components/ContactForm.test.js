@@ -23,3 +23,12 @@ test('Forms Value Inputs', () => {
         lastName:''
     })
 })
+
+test('Button Specs', () => {
+    const {getByTestId} = render(<ContactForm/>)
+    const submitBtn = getByTestId('submit-btn')
+
+    expect(submitBtn).toHaveAttribute('type', 'submit')
+    expect(submitBtn).not.toHaveAttribute('type', 'reset')
+    expect(submitBtn).not.toHaveAttribute('disabled')
+})
