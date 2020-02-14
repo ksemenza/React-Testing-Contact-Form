@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   return (
     <div className="App">
-      <form  onSubmit={handleSubmit(onSubmit)}>
+      <form data-testid='contact-form'  onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input data-testid='required-input' required

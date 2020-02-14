@@ -14,3 +14,12 @@ expect(firstName).toBeInTheDocument()
   });
 
 
+test('Forms Value Inputs', () => {
+    const {getByTestId} = render(<ContactForm/>)
+    const formCheck = getByTestId('contact-form')
+
+    expect(formCheck).toHaveFormValues({
+        firstName:'',
+        lastName:''
+    })
+})
