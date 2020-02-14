@@ -12,10 +12,10 @@ const ContactForm = () => {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form  onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
-          <input
+          <input data-testid='required-input' required
             name="firstName"
             placeholder="bill"
             ref={register({ required: true, maxLength: 3 })}
@@ -57,6 +57,8 @@ const ContactForm = () => {
         )}
         <input type="submit" />
       </form>
+
+   
     </div>
   );
 };
