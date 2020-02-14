@@ -7,7 +7,7 @@ test("First Name", () => {
   const {getByText} = render(<App />);
 
   const fname = getByText(/First Name/i)
-  const lname = getByText(/Last Name/i)
+
 
   expect(fname).toBeInTheDocument();
   expect(fname).toBeTruthy()
